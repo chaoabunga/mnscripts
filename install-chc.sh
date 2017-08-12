@@ -1,12 +1,8 @@
 #!/bin/sh
 #TODO: add version number to script
 #TODO: add chc version dependency to script
+#TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
-
-### properly propagate error codes
-set -e
-set -o pipefail
-###
 
 noflags() {
     echo "Usage: install-chc [options]"
