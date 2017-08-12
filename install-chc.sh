@@ -22,8 +22,7 @@ sudo swapon /swapfile
 git clone https://github.com/chaincoin/chaincoin
 cd chaincoin
 ./autogen.sh
-./configure
-make
+./configure --without-gui --disable-testsmake
 make install
 mkdir .chaincoin
 mv chc-scripts/chaincoin.conf .chaincoin
