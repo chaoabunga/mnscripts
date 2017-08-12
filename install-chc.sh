@@ -5,36 +5,44 @@
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
 
 noflags() {
+	echo "--------------------------------------"
     echo "Usage: install-chc [options]"
     echo "Valid options are:"
     echo "-gui" #can prolly change this for something more interesting i.e. desktop, master node, etc.
     echo "-nogui" #this too
     echo "Do not provide more than one option."
-    exit 2
+    echo "--------------------------------------"
+    exit 1
+}
+
+message() {
+	echo "|============================================================================>>>>"
+	echo $1
+	echo "|================>>>"
 }
 
 error() {
-	echo "|================================================|"
-	echo "| An error occured, you must fix it to continue! |"
-	echo "|================================================|"
+	message "| An error occured, you must fix it to continue!"
 	exit 1
 }
 
 success() {
-	echo "SUCCESS! You can now run chaincoind"
+	message "| SUCCESS! You can now run chaincoind"
 	exit 0
 }
 
 prepdependencies() { #TODO: add error detection
+	message "Installing dependencies..."
 	sudo apt-get update
 	sudo apt-get upgrade -y
 	sudo apt-get install automake libdb++-dev build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libminiupnpc-dev git software-properties-common python-software-properties g++ bsdmainutils libevent-dev
 	sudo add-apt-repository ppa:bitcoin/bitcoin -y
 	sudo apt-get update
-	sudo apt-get install libdb4.8-dev libdb4.8++-dev
+	sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 }
 
 createswap() { #TODO: add error detection
+	message "Creating 2GB temporary swap file..."
 	sudo dd if=/dev/zero of=/swapfile bs=1024M count=2000
 	sudo mkswap /swapfile
 	sudo chown root:root /swapfile
@@ -43,19 +51,24 @@ createswap() { #TODO: add error detection
 }
 
 clonerepo() { #TODO: add error detection
+	message "Cloning from github repository..."
 	git clone https://github.com/chaincoin/chaincoin.git
 }
 
 compile() {
 	cd chaincoin #TODO: squash relative path
+	message "Preparing to build..."
 	./autogen.sh
-	if [ $? -ne 0 ]; error fi
+	if [ $? -ne 0 ]; then error; fi
+	message "Configuring build options..."
 	./configure $1 --disable-tests
-	if [ $? -ne 0 ]; error fi
+	if [ $? -ne 0 ]; then error; fi
+	message "Building ChainCoin..."
 	make
-	if [ $? -ne 0 ]; error fi
+	if [ $? -ne 0 ]; then error; fi
+	message "Installing ChainCoin..."
 	sudo make install
-	if [ $? -ne 0 ]; error fi
+	if [ $? -ne 0 ]; then error; fi
 }
 
 install() {
