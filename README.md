@@ -13,6 +13,9 @@ cd chc-scripts
 
 chmod 777 install-chc.sh
 
+***Important***
+***Make sure you edit the chaincoin.conf file with right values first before install.***
+
 ./install-chc.sh
 
 -----------
