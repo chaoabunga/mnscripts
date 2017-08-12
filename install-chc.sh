@@ -21,11 +21,12 @@ sudo dd if=/dev/zero of=/swapfile bs=64M count=16
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
+cd ~/
 git clone https://github.com/chaincoin/chaincoin
 cd chaincoin
 ./autogen.sh
 ./configure --without-gui --disable-tests
 make install
-cd ~/
-mkdir .chaincoin
-mv chc-scripts/chaincoin.conf .chaincoin
+
+mkdir ~/.chaincoin
+mv ~/chc-scripts/chaincoin.conf ~/.chaincoin
