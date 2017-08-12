@@ -25,3 +25,5 @@ cd chaincoin
 ./configure
 make
 make install
+mkdir .chaincoin
+mv chc-scripts/chaincoin.conf .chaincoin
