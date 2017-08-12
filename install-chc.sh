@@ -3,31 +3,32 @@
 #TODO: add chc version dependency to script
 #TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
+#TODO: add proper install path rather than defaulting
 
 noflags() {
-	echo "--------------------------------------"
+	echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
     echo "Usage: install-chc [options]"
     echo "Valid options are:"
     echo "-gui" #can prolly change this for something more interesting i.e. desktop, master node, etc.
     echo "-nogui" #this too
     echo "Do not provide more than one option."
-    echo "--------------------------------------"
+    echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
     exit 1
 }
 
 message() {
-	echo "|============================================================================>>>>"
-	echo $1
-	echo "|================>>>"
+	echo "╒═════════════════════════════════════════════════════════════════════════════════╼>>╲\┄"
+	echo "┆ $1"
+	echo "╘══════════════════════════╼<<╱/┄┄"
 }
 
 error() {
-	message "| An error occured, you must fix it to continue!"
+	message "An error occured, you must fix it to continue!"
 	exit 1
 }
 
 success() {
-	message "| SUCCESS! You can now run chaincoind"
+	message "SUCCESS! You can now run chaincoind"
 	exit 0
 }
 
