@@ -35,7 +35,7 @@ prepdependencies() { #TODO: add error detection
 	message "Installing dependencies..."
 	sudo apt-get update
 	sudo apt-get upgrade -y
-	sudo apt-get install automake libdb++-dev build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libminiupnpc-dev git software-properties-common python-software-properties g++ bsdmainutils libevent-dev
+	sudo apt-get install automake libdb++-dev build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libminiupnpc-dev git software-properties-common python-software-properties g++ bsdmainutils libevent-dev -y
 	sudo add-apt-repository ppa:bitcoin/bitcoin -y
 	sudo apt-get update
 	sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
