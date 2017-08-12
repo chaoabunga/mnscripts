@@ -11,7 +11,9 @@ git clone https://github.com/chaoabunga/chc-scripts
 
 cd chc-scripts
 
-chmod 777 install-chc.sh
+git config core.fileMode false
+
+chmod +x install-chc.sh
 
 ***Important***
 ***Make sure you edit the chaincoin.conf file with right values first before install.***
@@ -22,6 +24,6 @@ chmod 777 install-chc.sh
 For update
 -----------
 
-chmod 777 install-chc.sh
+chmod +x install-chc.sh
 
 ./update-chc.sh
