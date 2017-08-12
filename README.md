@@ -14,3 +14,11 @@ cd chc-scripts
 chmod 777 install-chc.sh
 
 ./install-chc.sh
+
+-----------
+For update
+-----------
+
+chmod 777 install-chc.sh
+
+./update-chc.sh
