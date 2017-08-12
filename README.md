@@ -11,6 +11,8 @@ git clone https://github.com/chaoabunga/chc-scripts
 
 cd chc-scripts
 
+git config core.fileMode false
+
 chmod 777 install-chc.sh
 
 ***Important***
