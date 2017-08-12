@@ -4,6 +4,7 @@
 #TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
 #TODO: add proper install path rather than defaulting
+#TODO: add specific dependencies depending on build option (i.e. gui requires QT4)
 
 noflags() {
 	echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
