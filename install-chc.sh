@@ -24,5 +24,6 @@ cd chaincoin
 ./autogen.sh
 ./configure --without-gui --disable-tests
 make install
+cd
 mkdir .chaincoin
 mv chc-scripts/chaincoin.conf .chaincoin
