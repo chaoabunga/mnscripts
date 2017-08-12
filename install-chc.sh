@@ -25,4 +25,3 @@ cd chaincoin
 ./configure
 make
 make install
-rm -fr chaincoin/
