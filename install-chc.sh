@@ -1,3 +1,4 @@
+
 #!/bin/sh
 #TODO: add version number to script
 #TODO: add chc version dependency to script
@@ -54,6 +55,7 @@ createswap() { #TODO: add error detection
 
 clonerepo() { #TODO: add error detection
 	message "Cloning from github repository..."
+  cd ~/
 	git clone https://github.com/chaincoin/chaincoin.git
 }
 
