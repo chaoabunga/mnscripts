@@ -42,8 +42,8 @@ prepdependencies() { #TODO: add error detection
 }
 
 createswap() { #TODO: add error detection
-	message "Creating 2GB temporary swap file..."
-	sudo dd if=/dev/zero of=/swapfile bs=1024M count=2000
+	message "Creating 2GB temporary swap file...this may take a few minutes..."
+	sudo dd if=/dev/zero of=/swapfile bs=1M count=2000
 	sudo mkswap /swapfile
 	sudo chown root:root /swapfile
 	sudo chmod 0600 /swapfile
@@ -63,7 +63,7 @@ compile() {
 	message "Configuring build options..."
 	./configure $1 --disable-tests
 	if [ $? -ne 0 ]; then error; fi
-	message "Building ChainCoin..."
+	message "Building ChainCoin...this may take a few minutes..."
 	make
 	if [ $? -ne 0 ]; then error; fi
 	message "Installing ChainCoin..."
