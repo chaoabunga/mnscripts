@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd
 chaincoind stop
 rm -fr chaincoin/
