@@ -6,7 +6,7 @@ rm -fr chaincoin/
 git clone https://github.com/chaincoin/chaincoin
 cd chaincoin/src
 ./autogen.sh
-./configure
+./configure --without-gui --disable-tests
 make
 make install
 chaincoind
