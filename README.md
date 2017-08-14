@@ -15,17 +15,17 @@ cd chc-scripts
 
 git config core.fileMode false
 
-chmod +x install-chc.sh
+chmod +x install-mn.sh
 
-./install-chc.sh
+./install-mn.sh
 
 -----------
 For update
 -----------
 
-chmod +x install-chc.sh
+chmod +x install-mn.sh
 
-./update-chc.sh
+./update-mn.sh
 
 **********
 Donations:  CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
