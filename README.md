@@ -1,5 +1,6 @@
 # chc-scripts
-Scripts for installing and updating Chaincoin easily.
+Scripts for installing and updating Chaincoin easily. 
+Experimental script, use at your own risk!!!
 
 On a brand new VPS type:
 
@@ -15,9 +16,6 @@ git config core.fileMode false
 
 chmod +x install-chc.sh
 
-***Important***
-***Make sure you edit the chaincoin.conf file with right values first before install.***
-
 ./install-chc.sh
 
 -----------
@@ -27,3 +25,6 @@ For update
 chmod +x install-chc.sh
 
 ./update-chc.sh
+
+**********
+Donations:  CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
