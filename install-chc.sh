@@ -1,4 +1,3 @@
-
 #!/bin/sh
 #TODO: add version number to script
 #TODO: add chc version dependency to script
@@ -55,7 +54,7 @@ createswap() { #TODO: add error detection
 
 clonerepo() { #TODO: add error detection
 	message "Cloning from github repository..."
-  cd ~/
+  	cd ~/
 	git clone https://github.com/chaincoin/chaincoin.git
 }
 
@@ -75,7 +74,28 @@ compile() {
 	if [ $? -ne 0 ]; then error; fi
 }
 
+createconf() {
+	#Prompt for Masternode IP and PrivateKey
+	#TODO: Can check for flag and skip this
+	#TODO: Random generate the user and password
+
+	echo "Enter Masternode IP, followed by [ENTER]: "
+	read mnip
+	echo "Enter Masternode PrivKey, followed by [ENTER]: "
+	read mnprivkey
+
+	message "Creating chaincoin.conf..."
+
+	CONFDIR=~/.chaincoin
+	if [ ! -d "$CONFDIR" ]; then mkdir $CONFDIR; fi
+	if [ $? -ne 0 ]; then error; fi
+
+	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=0" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$mnprivkey" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
+
+}
+
 install() {
+	createconf
 	prepdependencies
 	createswap
 	clonerepo
