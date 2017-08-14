@@ -1,6 +1,7 @@
 # chc-scripts
 Scripts for installing and updating Chaincoin easily. 
 Experimental script, use at your own risk!!!
+Tested Systems: Ubuntu 16.04
 
 On a brand new VPS type:
 
