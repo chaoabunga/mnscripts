@@ -23,7 +23,7 @@ chmod +x install-mn.sh
 For update
 -----------
 
-chmod +x install-mn.sh
+chmod +x update-mn.sh
 
 ./update-mn.sh
 
