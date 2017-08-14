@@ -1,6 +1,6 @@
 #!/bin/sh
-#TODO: add version number to script
-#TODO: add chc version dependency to script
+#Version 0.1.0
+#Chaincoin Version 0.9.3 or above
 #TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
 #TODO: add proper install path rather than defaulting
@@ -8,7 +8,7 @@
 
 noflags() {
 	echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
-    echo "Usage: install-chc [options]"
+    echo "Usage: install-mn [options]"
     echo "Valid options are:"
     echo "-gui" #can prolly change this for something more interesting i.e. desktop, master node, etc.
     echo "-nogui" #this too
@@ -90,7 +90,7 @@ createconf() {
 	if [ ! -d "$CONFDIR" ]; then mkdir $CONFDIR; fi
 	if [ $? -ne 0 ]; then error; fi
 
-	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=0" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$mnprivkey" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
+	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$mnprivkey" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
 
 }
 
