@@ -29,7 +29,7 @@ error() {
 }
 
 success() {
-	message "SUCCESS! You can now run chaincoind"
+	message "SUCCESS! You can now edit your ~/.chaincoin/chaincion.conf file with the correct values and then run chaincoind"
 	exit 0
 }
 
@@ -75,14 +75,8 @@ compile() {
 }
 
 createconf() {
-	#Prompt for Masternode IP and PrivateKey
 	#TODO: Can check for flag and skip this
 	#TODO: Random generate the user and password
-
-	echo "Enter Masternode IP, followed by [ENTER]: "
-	read mnip
-	echo "Enter Masternode PrivKey, followed by [ENTER]: "
-	read mnprivkey
 
 	message "Creating chaincoin.conf..."
 
@@ -90,7 +84,7 @@ createconf() {
 	if [ ! -d "$CONFDIR" ]; then mkdir $CONFDIR; fi
 	if [ $? -ne 0 ]; then error; fi
 
-	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$mnprivkey" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
+	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=REPLACE_WITH_MASTERNODE_PRIVKEY" "masternodeaddr=REPLACE_WITH_MASTERNODE_IP:11994" > $CONFDIR/chaincoin.conf
 
 }
 
