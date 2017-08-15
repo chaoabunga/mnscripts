@@ -104,17 +104,10 @@ install() {
 }
 
 #main
-if [ -z $1 ] || [ $# -gt 1 ]
-then
-	noflags
-fi
-
+#default to --without-gui
 if [ $1 = "-gui" ]
 then
 	install
-elif [ $1 = "-nogui" ]
-then
-	install --without-gui
 else
-	noflags
+	install --without-gui
 fi
