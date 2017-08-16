@@ -1,0 +1,20 @@
+<meta http-equiv="refresh" content="60"> <!-- Refresh every minutes -->
+<p>&nbsp;</p>
+<p>Masternode Stats</p>
+<!-- Display the countdown timer in an element -->
+<p> Next update in <span id="countdowntimer">60 </span> Seconds</p>
+
+<script type="text/javascript">
+    var timeleft = 60;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
+
+<div id="list">
+  <p><iframe src="stats.txt" frameborder="0" height="400"
+      width="95%"></iframe></p>
+</div>
