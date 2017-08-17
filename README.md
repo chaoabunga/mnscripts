@@ -1,8 +1,11 @@
 # chc-scripts
 Scripts for installing and updating Chaincoin easily. 
 Experimental script, use at your own risk!!!
-Tested Systems: Ubuntu 16.04
 
+Tested Systems: 
+  -Ubuntu 16.04
+
+Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
 
 wget -O - https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-mn.sh | bash
