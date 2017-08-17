@@ -8,7 +8,11 @@ Tested Systems:
 Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
 
-curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-mn.sh | bash -s 
+bash <( curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-mn.sh ) MASTERNODE_PRIVKEY
+
+Example:
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-mn.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
 
 -----------
 For update
