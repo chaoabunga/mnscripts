@@ -41,6 +41,7 @@ prepdependencies() { #TODO: add error detection
 	sudo add-apt-repository ppa:bitcoin/bitcoin -y
 	sudo apt-get update
 	sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
+	sudo apt-get install screen -y
 }
 
 createswap() { #TODO: add error detection
@@ -97,7 +98,7 @@ createhttp() {
 	wget https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/stats.txt
 	(crontab -l 2>/dev/null; echo "* * * * * echo MN Count:  > ~/web/stats.txt; /usr/local/bin/chaincoind masternode count >> ~/web/stats.txt; /usr/local/bin/chaincoind getinfo >> ~/web/stats.txt") | crontab -
 	mnip=$(curl -s https://api.ipify.org)
-	python3 -m http.server 8000 --bind $mnip > /dev/null &
+	screen -L sudo python3 -m http.server 8000 --bind $mnip > /dev/null &
 	echo "Web Server Started!  You can now access your stats page at http://$mnip:8000"
 }
 
