@@ -83,8 +83,9 @@ createconf() {
 	CONFDIR=~/.chaincoin
 	if [ ! -d "$CONFDIR" ]; then mkdir $CONFDIR; fi
 	if [ $? -ne 0 ]; then error; fi
-
-	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=REPLACE_WITH_MASTERNODE_PRIVKEY" "masternodeaddr=REPLACE_WITH_MASTERNODE_IP:11994" > $CONFDIR/chaincoin.conf
+	
+	mnip=$(curl -s https://api.ipify.org)
+	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=REPLACE_WITH_MASTERNODE_PRIVKEY" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
 
 }
 
