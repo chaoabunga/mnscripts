@@ -10,9 +10,8 @@ noflags() {
 	echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
     echo "Usage: install-mn [options]"
     echo "Valid options are:"
-    echo "-gui" #can prolly change this for something more interesting i.e. desktop, master node, etc.
-    echo "-nogui" #this too
-    echo "Do not provide more than one option."
+    echo "MASTERNODE_PRIVKEY(Required)"
+    echo "Example: install-mn 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV8"
     echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
     exit 1
 }
@@ -86,9 +85,7 @@ createconf() {
 	if [ $? -ne 0 ]; then error; fi
 	
 	mnip=$(curl -s https://api.ipify.org)
-	echo "Please enter MN PrivKey:"
-	read mnprivkey
-	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$mnprivkey" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
+	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$MNPRIVKEY" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
 
 }
 
@@ -116,9 +113,9 @@ install() {
 
 #main
 #default to --without-gui
-if [ $1 = "-gui" ]
+if [ -z $1 ]
 then
-	install
-else
-	install --without-gui
+	noflags
 fi
+MNPRIVKEY=$1
+install --without-gui
