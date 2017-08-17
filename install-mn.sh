@@ -29,6 +29,7 @@ error() {
 }
 
 success() {
+	chaincoind
 	message "SUCCESS! Your chaincoind has started."
 	exit 0
 }
