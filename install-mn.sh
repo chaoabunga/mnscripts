@@ -109,6 +109,7 @@ install() {
 	createswap
 	clonerepo
 	compile $1
+	createconf
 	createhttp
 	success
 }
