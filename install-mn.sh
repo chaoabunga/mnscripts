@@ -1,5 +1,5 @@
 #!/bin/sh
-#Version 0.1.0
+#Version 0.1.1
 #Chaincoin Version 0.9.3 or above
 #TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
@@ -29,7 +29,7 @@ error() {
 }
 
 success() {
-	message "SUCCESS! You can now edit your ~/.chaincoin/chaincion.conf file with the correct values and then run chaincoind"
+	message "SUCCESS! Your chaincoind has started."
 	exit 0
 }
 
@@ -85,16 +85,30 @@ createconf() {
 	if [ $? -ne 0 ]; then error; fi
 	
 	mnip=$(curl -s https://api.ipify.org)
-	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=REPLACE_WITH_MASTERNODE_PRIVKEY" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
+	echo "Please enter MN PrivKey:"
+	read mnprivkey
+	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$mnprivkey" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
 
 }
 
+createhttp() {
+	cd ~/
+	mkdir web
+	cd web
+	wget https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/index.html
+	wget https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/stats.txt
+	(crontab -l 2>/dev/null; echo "* * * * * echo MN Count:  > ~/web/stats.txt; /usr/local/bin/chaincoind masternode count >> ~/web/stats.txt; /usr/local/bin/chaincoind getinfo >> ~/web/stats.txt") | crontab -
+	mnip=$(curl -s https://api.ipify.org)
+	python3 -m http.server 8000 --bind $mnip > /dev/null &
+	echo "Web Server Started!  You can now access your stats page at http://$mnip:8000"
+}
+
 install() {
-	createconf
 	prepdependencies
 	createswap
 	clonerepo
 	compile $1
+	createhttp
 	success
 }
 
