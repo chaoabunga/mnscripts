@@ -1,6 +1,8 @@
 #!/bin/sh
-#Version 0.1.1
+#Version 0.1.1.1
+#Info: Installs Chaincoind daemon, Masternode based on privkey, and a simple web monitor.
 #Chaincoin Version 0.9.3 or above
+#Tested OS: Ubuntu 16.04 and 14.04
 #TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
 #TODO: add proper install path rather than defaulting
