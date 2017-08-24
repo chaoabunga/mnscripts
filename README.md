@@ -1,5 +1,5 @@
 # chc-scripts
-Version: 0.1.1.1
+Version: 0.1.1.2
 
 Scripts for installing and updating Chaincoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
 Experimental script, use at your own risk!!!
