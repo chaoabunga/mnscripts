@@ -1,11 +1,10 @@
 #!/bin/sh
-#Version 0.1.1.1
+#Version 0.1.1.2
 #Info: Installs Chaincoind daemon, Masternode based on privkey, and a simple web monitor.
 #Chaincoin Version 0.9.3 or above
 #Tested OS: Ubuntu 17.04, 16.04, and 14.04
 #TODO: make script less "ubuntu" or add other linux flavors
 #TODO: remove dependency on sudo user account to run script (i.e. run as root and specifiy chaincoin user so chaincoin user does not require sudo privileges)
-#TODO: add proper install path rather than defaulting
 #TODO: add specific dependencies depending on build option (i.e. gui requires QT4)
 
 noflags() {
@@ -87,7 +86,9 @@ createconf() {
 	if [ $? -ne 0 ]; then error; fi
 	
 	mnip=$(curl -s https://api.ipify.org)
-	printf "%s\n" "rpcuser=xxx" "rpcpassword=zzz" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$MNPRIVKEY" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
+	rpcuser=$(date +%s | sha256sum | base64 | head -c 10 ; echo)
+	rpcpass=$(openssl rand -base64 32)
+	printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnectons=256" "rpcport=11995" "externalip=$mnip" "bind=$mnip" "masternode=1" "masternodeprivkey=$MNPRIVKEY" "masternodeaddr=$mnip:11994" > $CONFDIR/chaincoin.conf
 
 }
 
