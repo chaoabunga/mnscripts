@@ -33,3 +33,4 @@ curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-web
 **********
 
 Donations:  CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
+Live stream help and video for masternodes: https://www.youtube.com/c/chaoabunga
