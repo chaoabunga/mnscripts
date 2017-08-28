@@ -10,25 +10,25 @@ Tested Systems:
 Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
 
-bash <( curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-mn.sh ) MASTERNODE_PRIVKEY
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) MASTERNODE_PRIVKEY
 
 Example:
 
-bash <( curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-mn.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
 
 ----------------------------------------------------
 For update
 (Assuming you used the above installation method.)
 ----------------------------------------------------
 
-curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/update-mn.sh | bash -s 
+curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/update-mn.sh | bash -s 
 
 -------------------------------------------
 Simple Web Monitoring System
 (If you already have a Masternode running)
 -------------------------------------------
 
-curl https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/install-web.sh | bash -s 
+curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-web.sh | bash -s 
 
 **********
 
