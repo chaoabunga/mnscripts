@@ -1,20 +1,34 @@
-# chc-scripts
+---------
+mnscripts
+---------
 Version: 0.1.1.2
-
-Scripts for installing and updating Chaincoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
+Scripts for installing and updating masternode coins such as ChainCoin and ArcticCoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
 Experimental script, use at your own risk!!!
 
+----------------
+Supported coins
+----------------
+-ChainCoin, ArcticCoin, EternityCoin
+
+---------------
 Tested Systems: 
-  -Ubuntu 17.04, 16.04, 14.04
+---------------
+-Ubuntu 17.04, 16.04, 14.04
 
 Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
 
-bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) MASTERNODE_PRIVKEY
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-[COIN].sh ) MASTERNODE_PRIVKEY
 
 Example:
 
+(ChainCoin)
+
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
+
+(ArcticCoin)
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-arc.sh ) 6uQoYPjwCs6yknDS9g88XCUnVzcYF6EwXFwZC2JaidKB3x5PAFX
 
 ----------------------------------------------------
 For update
@@ -32,6 +46,11 @@ curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-web.s
 
 **********
 
-Donations:  CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
+Donations:  
+CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
 
+ARC: AeRTDBq2sCi8YbfSxi7McH8UrYYAmjV6L5
+
+ENT: EQZ1ZJtDMwr5jHQAqqiE1HhtAkfqZYAACe
+            
 Live stream help and video for masternodes: https://www.youtube.com/c/chaoabunga
