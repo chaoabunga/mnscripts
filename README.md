@@ -47,6 +47,7 @@ curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-web.s
 **********
 
 Donations:  CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
+
             ENT: EQZ1ZJtDMwr5jHQAqqiE1HhtAkfqZYAACe
             
 Live stream help and video for masternodes: https://www.youtube.com/c/chaoabunga
