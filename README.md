@@ -1,13 +1,19 @@
-#mnscripts
+---------
+mnscripts
+---------
 Version: 0.1.1.2
 Scripts for installing and updating masternode coins such as Chaincoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
 Experimental script, use at your own risk!!!
 
-#Supported coins
+----------------
+Supported coins
+----------------
 -ChainVoin, EternityCoin
 
-#Tested Systems: 
-  -Ubuntu 17.04, 16.04, 14.04
+---------------
+Tested Systems: 
+---------------
+-Ubuntu 17.04, 16.04, 14.04
 
 Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
