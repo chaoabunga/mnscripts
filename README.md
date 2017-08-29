@@ -2,13 +2,13 @@
 mnscripts
 ---------
 Version: 0.1.1.2
-Scripts for installing and updating masternode coins such as Chaincoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
+Scripts for installing and updating masternode coins such as ChainCoin and EternityCoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
 Experimental script, use at your own risk!!!
 
 ----------------
 Supported coins
 ----------------
--ChainVoin, EternityCoin
+-ChainCoin, EternityCoin
 
 ---------------
 Tested Systems: 
