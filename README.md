@@ -23,9 +23,11 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 Example:
 
 (ChainCoin)
+
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
 
 (EternityCoin)
+
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-ent.sh ) 4RCNbNVxqir1CvLxXJ3AdchwybRp2b7Cwi2WoC9BHTZWctX91h7
 
 ----------------------------------------------------
