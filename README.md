@@ -30,6 +30,11 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-arc.sh ) 6uQoYPjwCs6yknDS9g88XCUnVzcYF6EwXFwZC2JaidKB3x5PAFX
 
+(Eternity)
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-ent.sh ) 
+4RCKB1vhGw2wGEsihdZPcvwDNp7NAggtnN1w4T5htB7LcNEbPWB
+
 ----------------------------------------------------
 For update
 (Assuming you used the above installation method.)
