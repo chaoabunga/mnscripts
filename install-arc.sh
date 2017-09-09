@@ -116,7 +116,7 @@ install() {
 	clonerepo
 	compile $1
 	createconf
-	createhttp
+	#createhttp
 	success
 }
 
