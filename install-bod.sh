@@ -29,7 +29,7 @@ error() {
 }
 
 success() {
-	bloodcoindd
+	bloodcoind
 	message "SUCCESS! Your bloodcoind has started."
 	exit 0
 }
