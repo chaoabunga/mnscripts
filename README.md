@@ -20,15 +20,23 @@ On a brand new VPS copy and paste the following line and press ENTER:
 
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-[COIN].sh ) MASTERNODE_PRIVKEY
 
-Example:
+Examples:
+
+(ArcticCoin)
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-arc.sh ) 6uQoYPjwCs6yknDS9g88XCUnVzcYF6EwXFwZC2JaidKB3x5PAFX
+
+(BloodCoin)
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-bod.sh ) 89DdjQ7uSKyfR9vdsBBx97T1wicqKCp1t7Kb4qVpFkejUzo8jE5
 
 (ChainCoin)
 
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
 
-(ArcticCoin)
+(DasCoin)
 
-bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-arc.sh ) 6uQoYPjwCs6yknDS9g88XCUnVzcYF6EwXFwZC2JaidKB3x5PAFX
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-das.sh ) 7s3du8ZS7GVbzXp8KoEQxzRQi5D8DJwtNudhMz86TEVC5untLVx
 
 (Eternity)
 
