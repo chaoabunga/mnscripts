@@ -4,7 +4,7 @@ cd ~/
 chaincoind stop
 rm -fr chaincoin/
 git clone https://github.com/chaincoin/chaincoin
-cd chaincoin/src
+cd chaincoin
 sudo apt-get install libevent-dev
 ./autogen.sh
 ./configure --without-gui --disable-tests
