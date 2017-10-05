@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd
+cd ~/
 chaincoind stop
 rm -fr chaincoin/
 git clone https://github.com/chaincoin/chaincoin
