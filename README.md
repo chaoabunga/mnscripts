@@ -45,10 +45,10 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 
 ----------------------------------------------------
 For update
-(Assuming you used the above installation method.)
+(Chaincoin Only.)
 ----------------------------------------------------
 
-curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/update-mn.sh | bash -s 
+curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/update-chc.sh | bash -s 
 
 -------------------------------------------
 Simple Web Monitoring System
