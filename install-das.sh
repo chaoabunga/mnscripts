@@ -56,7 +56,7 @@ createswap() { #TODO: add error detection
 clonerepo() { #TODO: add error detection
 	message "Cloning from github repository..."
   	cd ~/
-	git clone https://github.com/Truckman83/DAS-source
+	git clone https://github.com/Truckman83/DAS
 }
 
 
