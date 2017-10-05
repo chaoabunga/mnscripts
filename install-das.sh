@@ -56,20 +56,20 @@ createswap() { #TODO: add error detection
 clonerepo() { #TODO: add error detection
 	message "Cloning from github repository..."
   	cd ~/
-	git clone https://github.com/Truckman83/DAS
+	sudo git clone https://github.com/Truckman83/DAS
 }
 
 
 compile() {
 	cd DAS #TODO: squash relative path
 	message "Preparing to build..."
-	./autogen.sh
+	sudo ./autogen.sh
 	if [ $? -ne 0 ]; then error; fi
 	message "Configuring build options..."
-	./configure $1 --disable-tests
+	sudo ./configure $1 --disable-tests
 	if [ $? -ne 0 ]; then error; fi
 	message "Building DAS...this may take a few minutes..."
-	make
+	sudo make
 	if [ $? -ne 0 ]; then error; fi
 	message "Installing DAS..."
 	sudo make install
@@ -95,7 +95,7 @@ createconf() {
 
 createhttp() {
 	cd ~/
-	mkdir web
+	sudo mkdir web
 	cd web
 	wget https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/index.html
 	wget https://raw.githubusercontent.com/chaoabunga/chc-scripts/master/stats.txt
