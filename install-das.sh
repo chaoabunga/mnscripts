@@ -63,6 +63,7 @@ clonerepo() { #TODO: add error detection
 compile() {
 	cd DAS #TODO: squash relative path
 	message "Preparing to build..."
+	chmod +x autogen.sh
 	sudo ./autogen.sh
 	if [ $? -ne 0 ]; then error; fi
 	message "Configuring build options..."
