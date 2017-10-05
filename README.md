@@ -62,7 +62,9 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 Donations:  
 [Bitcoin]:    15Jhcshv7qFAHmGG731xbtt67bB5gcEJ96
 
+
 [Crown]:      12R6PAoaAAcNHpqmyVhrQcUtVCVog9Gx86 
+
 
 [Chaincoin] : Cd7dPp1vC9L5fWtC1WtGpmXbjSpwgAyaq7
             
