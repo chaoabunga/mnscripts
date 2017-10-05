@@ -61,7 +61,7 @@ clonerepo() { #TODO: add error detection
 
 
 compile() {
-	cd DAS-source #TODO: squash relative path
+	cd DAS #TODO: squash relative path
 	message "Preparing to build..."
 	./autogen.sh
 	if [ $? -ne 0 ]; then error; fi
