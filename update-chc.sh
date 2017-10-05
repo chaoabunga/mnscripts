@@ -2,11 +2,11 @@
 
 cd ~/
 chaincoind stop
-rm -fr chaincoin/
-git clone https://github.com/chaincoin/chaincoin
+sudo rm -fr chaincoin/
+sudo git clone https://github.com/chaincoin/chaincoin
 cd chaincoin
-./autogen.sh
-./configure --without-gui --disable-tests
-make
-make install
+sudo ./autogen.sh
+sudo ./configure --without-gui --disable-tests
+sudo make
+sudo make install
 chaincoind
