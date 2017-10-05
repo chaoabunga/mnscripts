@@ -60,10 +60,8 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 **********
 
 Donations:  
-CHC: CRbr8rcYU9zifwsYFcCVPgp6bwrJC5PhUk
-
-ARC: AeRTDBq2sCi8YbfSxi7McH8UrYYAmjV6L5
-
-ENT: EQZ1ZJtDMwr5jHQAqqiE1HhtAkfqZYAACe
+[Bitcoin]:    15Jhcshv7qFAHmGG731xbtt67bB5gcEJ96
+[Crown]:      12R6PAoaAAcNHpqmyVhrQcUtVCVog9Gx86 
+[Chaincoin] : Cd7dPp1vC9L5fWtC1WtGpmXbjSpwgAyaq7
             
 Live stream help and video for masternodes: https://www.youtube.com/c/chaoabunga
