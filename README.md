@@ -48,14 +48,14 @@ For update
 (Chaincoin Only.)
 ----------------------------------------------------
 
-curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/update-chc.sh | bash -s 
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/update-chc.sh )
 
 -------------------------------------------
 Simple Web Monitoring System
 (If you already have a Masternode running)
 -------------------------------------------
 
-curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-web.sh | bash -s 
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-web.sh )
 
 **********
 
