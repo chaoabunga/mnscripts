@@ -8,7 +8,7 @@ Experimental script, use at your own risk!!!
 ----------------
 Supported coins
 ----------------
--ChainCoin, ArcticCoin, EternityCoin
+-ChainCoin, ArcticCoin, BloodCoin, DasCoin, EternityCoin, PieX
 
 ---------------
 Tested Systems: 
@@ -42,6 +42,11 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-ent.sh ) 
 4RCKB1vhGw2wGEsihdZPcvwDNp7NAggtnN1w4T5htB7LcNEbPWB
+
+(PieX)
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-piex.sh ) 
+8828uLaPreoz6dWNYS5wP7s8CwVfvQAeGUBo6kz7cwSSrZfHVFm
 
 ----------------------------------------------------
 For update
