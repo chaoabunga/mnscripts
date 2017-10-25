@@ -1,8 +1,8 @@
 ---------
 mnscripts
 ---------
-Version: 0.1.1.2
-Scripts for installing and updating masternode coins such as ChainCoin and ArcticCoin easily. Installs Masternode based on Privkey input, and a simple web monitor.
+Version: 0.1.1.3
+Scripts for installing and updating masternode coins such as ChainCoin and ArcticCoin easily. Installs Masternode, generate a key and the conf line for you.
 Experimental script, use at your own risk!!!
 
 ----------------
@@ -21,7 +21,7 @@ On a brand new VPS copy and paste the following line and press ENTER:
 Examples:
 (ChainCoin) (New! No more genky as input!)
 
-bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 
+curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh | bash
 
 (ArcticCoin)
 
@@ -63,8 +63,6 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 
 Donations:  
 Bitcoin:    15Jhcshv7qFAHmGG731xbtt67bB5gcEJ96
-
-Crown:      12R6PAoaAAcNHpqmyVhrQcUtVCVog9Gx86 
 
 Chaincoin:  Cd7dPp1vC9L5fWtC1WtGpmXbjSpwgAyaq7
             
