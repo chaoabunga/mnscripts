@@ -73,7 +73,7 @@ createconf() {
 	#TODO: Random generate the user and password
 
 	message "Creating chaincoin.conf..."
-
+	MNPRIVKEY="6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6"
 	CONFDIR=~/.chaincoin
 	CONFILE=$CONFDIR/chaincoin.conf
 	if [ ! -d "$CONFDIR" ]; then mkdir $CONFDIR; fi
@@ -127,5 +127,4 @@ install() {
 
 #main
 #default to --without-gui
-MNPRIVKEY="6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6"
 install --without-gui
