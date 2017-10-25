@@ -21,6 +21,9 @@ On a brand new VPS copy and paste the following line and press ENTER:
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-[COIN].sh ) MASTERNODE_PRIVKEY
 
 Examples:
+(ChainCoin) (New! No more genky as input!)
+
+bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 
 
 (ArcticCoin)
 
@@ -29,10 +32,6 @@ bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/insta
 (BloodCoin)
 
 bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-bod.sh ) 89DdjQ7uSKyfR9vdsBBx97T1wicqKCp1t7Kb4qVpFkejUzo8jE5
-
-(ChainCoin)
-
-bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh ) 6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6
 
 (DasCoin)
 
