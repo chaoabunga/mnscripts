@@ -112,7 +112,7 @@ createhttp() {
 success() {
 	chaincoind
 	message "SUCCESS! Your chaincoind has started. Masternode.conf setting below..."
-	message "MN $mnip:11994 $MNPRIVKEY REPLACE_WITH_TX_HASH REPLACE_WITH_TX_INDEX"
+	message "MN $mnip:11994 $MNPRIVKEY TXHASH INDEX"
 	exit 0
 }
 
