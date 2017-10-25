@@ -18,8 +18,6 @@ Tested Systems:
 Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
 
-bash <( curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-[COIN].sh ) MASTERNODE_PRIVKEY
-
 Examples:
 (ChainCoin) (New! No more genky as input!)
 
