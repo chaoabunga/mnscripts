@@ -8,7 +8,7 @@ Experimental script, use at your own risk!!!
 ----------------
 Supported coins
 ----------------
--ChainCoin
+-ChainCoin, Social Send
 
 ---------------
 Tested Systems: 
@@ -23,6 +23,12 @@ Examples:
 
 curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh | bash
 
+
+(SocialSend) (New! Website, shorter 1-liner, send.nodes.mn)
+
+curl send.nodes.mn/install.sh | bash 
+
+
 ----------------------------------------------------
 For update
 ----------------------------------------------------
@@ -36,5 +42,10 @@ Donations:
 Bitcoin:    15Jhcshv7qFAHmGG731xbtt67bB5gcEJ96
 
 Chaincoin:  Cd7dPp1vC9L5fWtC1WtGpmXbjSpwgAyaq7
+
+SocialSend: SPsmrViyWRjqD8ngdmHMxpJz6AUcerHWtc
+
+
             
 Live stream help and video for masternodes: https://www.youtube.com/c/chaoabunga
+1-liner masternode install scripts, faucets and more at: https://nodes.mn
