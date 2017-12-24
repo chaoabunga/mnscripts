@@ -46,7 +46,7 @@ createswap() { #TODO: add error detection
 	sudo swapon /swapfile
 
 	#make swap permanent
-	sudo echo "/swap none swap sw 0 0" >> /etc/fstab
+	sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 }
 
 clonerepo() { #TODO: add error detection
