@@ -3,7 +3,7 @@
 cd ~/
 sudo chaincoind stop
 sudo rm -fr chaincoin/
-sudo git clone https://github.com/chaincoin/chaincoin
+sudo git clone https://github.com/chaincoin-legacy/chaincoin
 cd chaincoin
 sudo ./autogen.sh
 sudo ./configure --without-gui --disable-tests
