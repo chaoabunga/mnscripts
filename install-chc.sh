@@ -52,7 +52,7 @@ createswap() { #TODO: add error detection
 clonerepo() { #TODO: add error detection
 	message "Cloning from github repository..."
   	cd ~/
-	git clone https://github.com/chaincoin-legacy/chaincoin
+	git clone -b v0.16.4 https://github.com/chaincoin/chaincoin
 }
 
 compile() {
