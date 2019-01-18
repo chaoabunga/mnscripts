@@ -3,7 +3,7 @@ mnscripts
 ---------
 
 Version: 0.1.1.3
-Scripts for installing and updating masternode coins such as ChainCoin and ArcticCoin easily. Installs Masternode, generate a key and the conf line for you.
+Scripts for installing and updating masternode coins such as ChainCoin and SocialSend easily. Installs Masternode, generate a key and the conf line for you.
 Experimental script, use at your own risk!!!
 
 ----------------
