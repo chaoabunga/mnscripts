@@ -31,7 +31,7 @@ prepdependencies() { #TODO: add error detection
 	message "Installing dependencies..."
 	sudo apt-get update
 	sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
-	sudo apt-get install automake libdb++-dev build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libminiupnpc-dev git software-properties-common python-software-properties g++ bsdmainutils libevent-dev -y
+	sudo apt-get install automake libdb++-dev build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libminiupnpc-dev git software-properties-common g++ bsdmainutils libevent-dev -y
 	sudo add-apt-repository ppa:bitcoin/bitcoin -y
 	sudo apt-get update
 	sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
@@ -77,7 +77,7 @@ createconf() {
 
 	message "Creating chaincoin.conf..."
 	MNPRIVKEY="6FBUPijSGWWDrhbVPDBEoRuJ67WjLDpTEiY1h4wAvexVZH3HnV6"
-	CONFDIR=~/.chaincoin
+	CONFDIR=~/.chaincoincore
 	CONFILE=$CONFDIR/chaincoin.conf
 	if [ ! -d "$CONFDIR" ]; then mkdir $CONFDIR; fi
 	if [ $? -ne 0 ]; then error; fi
