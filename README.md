@@ -1,11 +1,6 @@
 ---------
 mnscripts
 ---------
-**********
-Deprecated
-
--New version here 
-https://github.com/chaoabunga/chcnode
 
 Version: 0.1.1.3
 Scripts for installing and updating masternode coins such as ChainCoin and ArcticCoin easily. Installs Masternode, generate a key and the conf line for you.
