@@ -114,6 +114,7 @@ createhttp() {
 
 sentinel() {
 	message "Installing Sentinel..."
+	cd ~/
 	sudo apt-get update
 	sudo apt-get -y install python-virtualenv
 	git clone https://github.com/chaincoin/sentinel.git && cd sentinel
