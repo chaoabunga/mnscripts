@@ -1,5 +1,5 @@
 #!/bin/sh
-#Version 0.1.1.3
+#Version 0.16.4
 #Info: Installs Chaincoind daemon, Masternode based on privkey, and a simple web monitor.
 #Chaincoin Version 0.9.3 or above
 #Tested OS: Ubuntu 17.04, 16.04, and 14.04
