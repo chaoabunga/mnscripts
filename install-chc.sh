@@ -124,6 +124,7 @@ sentinel() {
 	printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcport=11995" "rpchost=127.0.0.1" "network=mainnet" "db_name=database/sentinel.db" "db_driver=sqlite" > sentinel.conf
 	message "Updating Crontab..."
 	(crontab -l 2>/dev/null; echo "* * * * * cd /root/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1") | crontab -
+}
 
 success() {
 	chaincoind
