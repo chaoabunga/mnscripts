@@ -113,16 +113,16 @@ createhttp() {
 }
 
 sentinel() {
-	echo "Installing Sentinel..."
+	message "Installing Sentinel..."
 	sudo apt-get update
 	sudo apt-get -y install python-virtualenv
 	git clone https://github.com/chaincoin/sentinel.git && cd sentinel
 	virtualenv ./venv && ./venv/bin/pip install -r requirements.txt
 	git pull
 	rm -rf venv && virtualenv ./venv && ./venv/bin/pip install -r requirements.txt
-	echo "Creating sentinel.conf..."
+	message "Creating sentinel.conf..."
 	printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcport=11995" "rpchost=127.0.0.1" "network=mainnet" "db_name=database/sentinel.db" "db_driver=sqlite" > sentinel.conf
-	echo "Updating Crontab..."
+	message "Updating Crontab..."
 	(crontab -l 2>/dev/null; echo "* * * * * cd /root/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1") | crontab -
 
 success() {
