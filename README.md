@@ -25,18 +25,6 @@ Examples:
 curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh | bash
 
 
-(SocialSend) (New! Website, shorter 1-liner, send.nodes.mn)
-
-curl send.nodes.mn/install.sh | bash 
-
-
-----------------------------------------------------
-For update
-----------------------------------------------------
-
-curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/update-chc.sh | bash
-
-
 **********
 
 Donations:  
