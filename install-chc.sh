@@ -61,7 +61,7 @@ compile() {
 	./autogen.sh
 	if [ $? -ne 0 ]; then error; fi
 	message "Configuring build options..."
-	./configure $1 --disable-tests
+	./configure $1 --disable-tests --disable-wallet
 	if [ $? -ne 0 ]; then error; fi
 	message "Building ChainCoin...this may take a few minutes..."
 	make
