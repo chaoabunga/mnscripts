@@ -14,7 +14,7 @@ Supported coins
 ---------------
 Tested Systems: 
 ---------------
--Ubuntu 17.10, 17.04, 16.04, 14.04
+-Ubuntu 18.10, 18.04, 17.10, 17.04, 16.04, 14.04
 
 Please choose a test system from above.
 On a brand new VPS copy and paste the following line and press ENTER:
@@ -24,6 +24,7 @@ Examples:
 
 curl https://raw.githubusercontent.com/chaoabunga/mnscripts/master/install-chc.sh | bash
 
+License:  Standard MIT License
 
 **********
 
