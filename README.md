@@ -35,7 +35,4 @@ Chaincoin:  Cd7dPp1vC9L5fWtC1WtGpmXbjSpwgAyaq7
 
 SocialSend: SPsmrViyWRjqD8ngdmHMxpJz6AUcerHWtc
 
-
-            
-Live stream help and video for masternodes: https://www.youtube.com/c/chaoabunga
-1-liner masternode install scripts, faucets and more at: https://nodes.mn
+https://www.chaohan.com
