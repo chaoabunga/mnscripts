@@ -34,5 +34,3 @@ Bitcoin:    15Jhcshv7qFAHmGG731xbtt67bB5gcEJ96
 Chaincoin:  Cd7dPp1vC9L5fWtC1WtGpmXbjSpwgAyaq7
 
 SocialSend: SPsmrViyWRjqD8ngdmHMxpJz6AUcerHWtc
-
-https://www.chaohan.com
