@@ -84,7 +84,7 @@ createconf() {
 	
 	mnip=$(curl -s https://api.ipify.org)
 	rpcuser=$(date +%s | sha256sum | base64 | head -c 10 ; echo)
-	rpcpass=$(openssl rand -base64 32)
+	rpcpass=$(date +%s | sha256sum | base64 | head -c 32 ; echo)
 	printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcallowip=127.0.0.1" "listen=1" "server=1" "daemon=1" "maxconnections=256" "masternode=1" "masternodeprivkey=$MNPRIVKEY" > $CONFILE
 
         chaincoind
